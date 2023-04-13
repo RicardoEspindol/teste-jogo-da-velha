@@ -1,62 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Joaom from './img/joao.jpg';
+import styled from 'styled-components'
 
-class Square extends React.Component {
-  render() {
-    return (
-      <button className="square">
-        {/* TODO */}
-      </button>
-    );
-  }
-}
+function Game(){
 
-class Board extends React.Component {
-  renderSquare(i) {
-    return <Square />;
-  }
+  const pStyle = {
+    fontSize: '40px',
+    textAlign: 'center',
+    color: 'red'
+  };
+  return (
+    <div style={pStyle}>
+      <img src={Joaom} alt='joao'/>
+      <p>Parabéns pra você<br/>
+        Nesta data querida<br/>
+        Muitas felicidades<br/>
+        Muitos anos de vida<br/><br/><br/>
 
-  render() {
-    const status = 'Next player: X';
-
-    return (
-      <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
-      </div>
-    );
-  }
-}
-
-class Game extends React.Component {
-  render() {
-    return (
-      <div className="game">
-        <div className="game-board">
-          <Board />
-        </div>
-        <div className="game-info">
-          <div>{/* status */}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
-    );
-  }
+        É pique, é pique<br/>
+        É pique, é pique, é pique<br/>
+        É hora, é hora<br/>
+        É hora, é hora, é hora<br/>
+        Ra-tim-bum!</p>
+    </div>
+  )
 }
 
 // ========================================
